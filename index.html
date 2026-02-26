@@ -12,32 +12,29 @@
 <body>
 
   <!-- Sign-up form start -->
-
-  Stay updated!
-
-  Join 60,000+ product managers receiving monthly updates on:
-
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
-
-  Email address
-  email@company.com
-
-  Subscribe to monthly newsletter
-
-  <!-- Sign-up form end -->
-
-  <!-- Success message start -->
-
-  Thanks for subscribing!
-
-  A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
-
-  Dismiss message
-
-  <!-- Success message end -->
+  <section class="newsletter">
+    <img src="./assets/images/illustration-sign-up-mobile.svg" alt="Sign up illustration" class="newsletter__image">
+    <section class="newsletter__info">
+      <h1 class="newletter__title">Stay updated!</h1>
+      <p class="newsletter__">Join 60,000+ product managers receiving monthly updates on:</p>
+      <ul>
+        <li> <img src="./assets/images/icon-list.svg" alt="List icon"> Product discovery and building what matters</li>
+        <li> <img src="./assets/images/icon-list.svg" alt="List icon"> Measuring to ensure updates are a success</li>
+        <li> <img src="./assets/images/icon-list.svg" alt="List icon"> And much more!</li>
+      </ul>
+      <form action="post">
+        <label for="email-input">Email address</label>
+        <input id="email-input" type="email" placeholder="email@company.com" required>
+        <button type="submit">Subscribe to monthly newsletter</button>
+      </form>
+    </section>
+    <section class="newsletter__success-message">
+      <img src="./assets/images/icon-success.svg" alt="Icon success" class="newsletter__success-icon">
+      <h2 class="newsletter__success-title">Thanks for subscribing!</h2>
+      <p class="newsletter__success-text">A confirmation email has been sent to ash@loremcompany.com. Please open it and click the button inside to confirm your subscription.</p>
+      <button class="newsletter__dismiss-button">Dismiss message</button>
+    </section>
+  </section>
   
 </body>
 </html>
