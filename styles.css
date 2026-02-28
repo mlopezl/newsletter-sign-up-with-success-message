@@ -28,7 +28,7 @@ body {
   align-items: center;
   gap: 10px;
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
   min-height: 100vh;
   margin: 0 auto;
   background-color: var(--White);
@@ -123,7 +123,7 @@ body {
 
 .newsletter__success-message {
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
   min-height: 100vh;
   margin: 0 auto;
   display: flex;
@@ -170,5 +170,58 @@ body {
 @media (min-width: 321px) {
   .newsletter__image-container {
     height: 300px;
+  }
+}
+
+@media (min-width: 600px) {
+  body{
+    height: 100vh ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .newsletter {
+    flex-direction: row;
+    gap: 0px;
+    max-width: 800px;
+    min-height: 400px;
+    align-items: center;
+    border-radius: 20px;
+    padding: 20px;
+  }
+
+  .newsletter__image-container {
+    width: 50%;
+    height: 500px;
+    background-image: url("./assets/images/illustration-sign-up-desktop.svg");
+    background-position: center;
+    background-size: cover 100%;
+    order: 1;
+    border-radius: 15px;
+  }
+
+  .newsletter__info {
+    width: 50%;
+    padding: 40px;
+    order: 0;
+  }
+
+  .newletter__title{
+    font-size: 2.5rem;
+  }
+
+  .newsletter__success-message {
+    max-width: 380px;
+    min-height: 200px;
+    border-radius: 20px;
+    padding: 40px;
+  }
+
+  .newsletter__success-title{
+    font-size: 2.5rem;
+  }
+
+  .newsletter__success-text{
+    margin-bottom: 0px;
   }
 }
