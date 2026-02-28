@@ -121,6 +121,48 @@ body {
   height: 50px;
 }
 
+.newsletter__success-message {
+  width: 100%;
+  max-width: 500px;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: var(--White);
+}
+
+.newsletter__success-icon {
+  width: 50px;
+}
+
+.newsletter__success-title{
+  font-size: 2rem;
+  color: var(--Blue-800);
+}
+
+.newsletter__success-text{
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--Blue-800);
+  line-height: 20px;
+  margin-bottom: 150px;
+}
+
+.newsletter__dismiss-button {
+  background-color: var(--Blue-800);
+  color: var(--White);
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  justify-self: flex-end;
+}
+
 .hide {
   display: none;
 }
