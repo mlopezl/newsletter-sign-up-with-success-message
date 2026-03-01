@@ -25,8 +25,11 @@
       </ul>
       <form class="form" action="post">
         <label for="email-input">Email address</label>
+        <p class="email__error-message hide">Valid email required</p>
         <input id="email-input" type="email" placeholder="email@company.com" required>
-        <button class="newsletter__submit-button" type="submit">Subscribe to monthly newsletter</button>
+        <button class="newsletter__submit-button" type="submit">
+          <p>Subscribe to monthly newsletter</p>
+        </button>
       </form>
     </section>
   </section>
@@ -36,7 +39,9 @@
     <p class="newsletter__success-text">A confirmation email has been sent to <strong>ash@loremcompany.com</strong>.
       Please open it and
       click the button inside to confirm your subscription.</p>
-    <button class="newsletter__dismiss-button">Dismiss message</button>
+    <button class="newsletter__dismiss-button">
+      <p>Dismiss message</p>
+    </button>
   </section>
   <script src="./app.js"></script>
 </body>

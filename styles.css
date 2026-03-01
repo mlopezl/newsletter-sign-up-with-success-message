@@ -5,6 +5,9 @@
   --Blue-700: hsl(235, 18%, 26%);
   --Grey: hsl(0, 0%, 58%);
   --White: hsl(0, 0%, 100%);
+  --Red: hsl(4, 100%, 67%);
+  --Red-500: hsl(4, 100%, 67%, 0.3);
+  --Red-600: hsl(346, 100%, 66%);
 }
 
 * {
@@ -19,7 +22,7 @@ html {
 }
 
 body {
-  background-color: var(--Blue-800);
+  background-color: var(--Blue-700);
 }
 
 .newsletter {
@@ -86,11 +89,12 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: 20px;
+  position: relative;
 }
 
 .form label {
   color: var(--Blue-800);
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   font-weight: bold;
   margin-bottom: 5px;
 }
@@ -102,6 +106,13 @@ body {
   border-radius: 5px;
   margin-bottom: 15px;
   height: 50px;
+  transition: all 0.3s ease;
+}
+
+.form input:hover,
+.form input:focus {
+  border-color: var(--Blue-800);
+  outline: none;
 }
 
 .form input::placeholder {
@@ -109,8 +120,8 @@ body {
   font-size: 0.8rem;
 }
 
-.form button {
-  background-color: var(--Blue-800);
+.form .newsletter__submit-button {
+  background: linear-gradient(to right, var(--Blue-800), var(--Blue-800));
   color: var(--White);
   border: none;
   padding: 15px;
@@ -119,6 +130,29 @@ body {
   font-weight: bold;
   cursor: pointer;
   height: 50px;
+  position: relative;
+}
+
+.form .newsletter__submit-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, var(--Red-600), var(--Red));
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  color: var(--White);
+  border-radius: 5px;
+  z-index: 0;
+}
+
+.form .newsletter__submit-button p {
+  position: relative;
+  z-index: 1;
+}
+
+.form .newsletter__submit-button:hover::before {
+  opacity: 1;
+  outline: 1px solid var(--Red);
 }
 
 .newsletter__success-message {
@@ -138,12 +172,12 @@ body {
   width: 50px;
 }
 
-.newsletter__success-title{
+.newsletter__success-title {
   font-size: 2rem;
   color: var(--Blue-800);
 }
 
-.newsletter__success-text{
+.newsletter__success-text {
   font-size: 0.8rem;
   font-weight: 500;
   color: var(--Blue-800);
@@ -152,7 +186,7 @@ body {
 }
 
 .newsletter__dismiss-button {
-  background-color: var(--Blue-800);
+  background: linear-gradient(to right, var(--Blue-800), var(--Blue-800));
   color: var(--White);
   border: none;
   padding: 15px;
@@ -161,6 +195,49 @@ body {
   font-weight: bold;
   cursor: pointer;
   justify-self: flex-end;
+  position: relative;
+}
+
+.newsletter__dismiss-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, var(--Red-600), var(--Red));
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  color: var(--White);
+  border-radius: 5px;
+  z-index: 0;
+}
+
+.newsletter__dismiss-button p {
+  position: relative;
+  z-index: 1;
+}
+
+.newsletter__dismiss-button:hover::before,
+.newsletter__dismiss-button:focus::before {
+  opacity: 1;
+  outline: 1px solid var(--Red);
+}
+
+.email__error {
+  background-color: var(--Red-500);
+  outline: 1px solid var(--Red);
+  border: none;
+  color: var(--Red);
+}
+
+.form .email__error::placeholder {
+  color: var(--Red);
+}
+
+.email__error-message {
+  color: var(--Red);
+  font-size: 0.7rem;
+  font-weight: bold;
+  position: absolute;
+  right: 10px;
 }
 
 .hide {
@@ -174,8 +251,8 @@ body {
 }
 
 @media (min-width: 600px) {
-  body{
-    height: 100vh ;
+  body {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -206,7 +283,7 @@ body {
     order: 0;
   }
 
-  .newletter__title{
+  .newletter__title {
     font-size: 2.5rem;
   }
 
@@ -217,11 +294,11 @@ body {
     padding: 40px;
   }
 
-  .newsletter__success-title{
+  .newsletter__success-title {
     font-size: 2.5rem;
   }
 
-  .newsletter__success-text{
+  .newsletter__success-text {
     margin-bottom: 0px;
   }
 }
