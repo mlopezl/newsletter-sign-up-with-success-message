@@ -7,6 +7,7 @@ const newsletterSubmitButton = document.querySelector(
 );
 const emailInput = document.getElementById("email-input");
 const emailErrorMessage = document.querySelector(".email__error-message");
+const emailInfo = document.getElementById("email-info");
 
 newsletterSubmitButton.addEventListener("click", (event) => {
   event.preventDefault();
@@ -30,6 +31,7 @@ emailInput.addEventListener("input", () => {
 function FormSubmitSuccess() {
   newsletter.classList.add("hide");
   newsletterSuccessMessage.classList.remove("hide");
+  emailInfo.textContent = emailInput.value;
 }
 
 function showFormSubmitError() {
